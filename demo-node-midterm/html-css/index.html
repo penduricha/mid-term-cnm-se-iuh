@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Mid Term</title>
+</head>
+<body>
+<header class="header-style">
+    <img src="../assets/website.png" alt="website" class="style-image">
+</header>
+<!--<nav class="nav-style">-->
+<!--    <ul class="menu-style">-->
+<!--        <a href="#" style="text-decoration: none;" class="style-link">-->
+<!--            Trang chủ-->
+<!--        </a>-->
+
+<!--        <a href="#" style="text-decoration: none;" class="style-link">-->
+<!--            Đăng ký-->
+<!--        </a>-->
+<!--    </ul>-->
+<!--</nav>-->
+<section class="section-style">
+    <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">LIST OF MEMBERS</h3>
+    <section class="style-view-form-table">
+        <form class="style-form-input">
+            <label for="name"></label>
+            <input type="text" class="form-control" placeholder="Enter name" id="name">
+
+            <label for="age"></label>
+            <input type="number" class="form-control" placeholder="Enter age" id="age">
+
+            <label for="gender"></label>
+            <select class="form-control" style="width: 97%" id="gender">
+                <option value="Male">Male</option>
+                <option value="Male">Female</option>
+            </select>
+
+<!--            <label for="dateOfBirth"></label>-->
+<!--            <input type="date" class="form-control" style="width: 96%" placeholder="Enter date of birth" id="dateOfBirth">-->
+            <input type="submit" class="style-input style-button-add" onclick="saveToTable()" value="Add">
+        </form>
+        <table class="table table-striped style-table">
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Id</th>
+                <th>Họ và tên</th>
+                <th>Tuổi</th>
+                <th>Giới tính</th>
+                <th>Xóa</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+<!-- <footer>
+
+</footer> -->
+</body>
+</html>

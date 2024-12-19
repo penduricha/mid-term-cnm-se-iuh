@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="/bootstrap.min.js"></script>
+    <title>Mid Term</title>
+</head>
+<body>
+<header class="header-style">
+    <img src="/website.png" alt="website" class="style-image">
+</header>
+
+<section class="section-style">
+    <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">LIST OF MEMBERS</h3>
+    <section class="style-view-form-table">
+        <form class="style-form-input" action="/add-student" method="POST">
+            <input type="text" class="form-control" placeholder="Enter name" id="name" name="name">
+            <input type="number" class="form-control" placeholder="Enter age" id="age" name="age">
+            <select class="form-control" style="width: 97%" id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input type="submit" class="style-input style-button-add" value="Add">
+        </form>
+        <table class="table table-striped style-table" style="height: 5%;">
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Id</th>
+                <th>Họ và tên</th>
+                <th>Tuổi</th>
+                <th>Giới tính</th>
+                <th>Xóa</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% students.forEach((student, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= student.id %></td>
+                    <td><%= student.name %></td>
+                    <td><%= student.age %></td>
+                    <td><%= student.gender %></td>
+                    <td>
+                        <form action="/delete-student/<%= student.id %>" method="POST" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </section>
+</section>
+<!-- <footer>
+
+</footer> -->
+</body>
+</html>
